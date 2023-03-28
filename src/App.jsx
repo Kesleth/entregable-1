@@ -1,33 +1,33 @@
-import { useState } from "react"
-import "./App.css"
-import ContainerInfo from "./components/containerInfo"
-import db from "./db/db.json"
-
-
-const images = ["bg1", "bg2"," bg3","bg4"]
+import { useState } from 'react';
+import './App.css'
+import QuoteBox from './components/QuoteBox';
+import quotes from './Json/quotes.json'
+import colors from './Json/colors.json'
 
 function App() {
-  const getRandomItem = (listItems) => {
-    const randonIndex = Math.floor(Math.random() *listItems.length);
-    return listItems[randonIndex];
-  };
 
-  const [quote, setQuote] =useState(getRandomItem(db));
-  const [bgImage, setBgImge]= useState(getRandomItem(images))
-   
-  const handleNewQuote= () => {setQuote(getRandomItem(db))
-    setBgImge(getRandomItem)
+  const randomElementFromArray = arr => {
+    const indexRandom = Math.floor(Math.random() * arr.length)
+    return arr[indexRandom]
   }
 
-  return (
-    <div className={`App ${bgImage}`}>
-     
-    <ContainerInfo quote={quote} handleNewQuote= {handleNewQuote} />
-       
-    <img src="/images/bg1.jpg" alt="" />
+const [quoteRandom, setQuoteRandom] = useState(randomElementFromArray(quotes))
+const [colorRandom, setcolorRandom] = useState(randomElementFromArray(colors))
 
-    </div>
-  );
+const handleClick = () => {
+  setQuoteRandom(randomElementFromArray(quotes))
+  setcolorRandom(randomElementFromArray(colors))
 }
 
-export default App;
+  return (
+    <div style={{ backgroundColor: colorRandom }} className="App">
+      <QuoteBox 
+        quoteRandom={quoteRandom} 
+        handleClick={handleClick}
+        colorRandom={colorRandom} 
+      />
+    </div>
+  )
+}
+
+export default App
