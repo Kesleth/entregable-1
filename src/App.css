@@ -23,11 +23,12 @@
   padding: 50px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  text-shadow: 2px 2px 0px #ff416c, 4px 4px 0px #ff4b2b;
 
 }
 
 .h1:hover{
-  transform: rotate(360deg);
+  transform: scale(1.1);
 }
 
 
