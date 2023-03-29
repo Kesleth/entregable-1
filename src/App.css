@@ -19,8 +19,15 @@
 h1 {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 2rem;
-  padding: 30px;
+  margin-top: 0;
+  padding: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+h1:hover{
+  transform: rotate(360deg);
 }
 
 
