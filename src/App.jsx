@@ -4,7 +4,7 @@ import QuoteBox from './components/QuoteBox';
 import quotes from './db/db.json'
 /*import colors from './db/colors.json'*/
 
-const color= ["bg1", "bg2", "bg3", "bg4",]
+const colors= ["bg1", "bg2", "bg3", "bg4",]
 
 function App() {
 
@@ -22,7 +22,7 @@ const handleClick = () => {
 }
 
   return (
-    <div /*style={{ backgroundColor: colorRandom }}*/ className="App">
+    <div /*style={{ backgroundColor: colorRandom }}*/ className={`App ${colorRandom}`}>
       <QuoteBox 
         quoteRandom={quoteRandom} 
         handleClick={handleClick}
