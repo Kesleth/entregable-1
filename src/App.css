@@ -1,8 +1,11 @@
 .App {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  padding: 0px 30%;
 }
 
 .box {
@@ -45,4 +48,20 @@
 .box__btn:hover {
   transform: scale(1.1);
   box-shadow: 0 0 0.5em #000300;
+}
+
+.bg1{
+  background-image: ("./images/bg1.jpg");
+}
+
+.bg2{
+  background-image: ("./images/bg2.jpg");
+}
+
+.bg3{
+  background-image: ("./images/bg3.jpg");
+}
+
+.bg4{
+  background-image: ("./images/bg4.jpg");
 }

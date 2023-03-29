@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import './App.css'
 import QuoteBox from './components/QuoteBox';
-import quotes from './Json/quotes.json'
-import colors from './Json/colors.json'
+import quotes from './db/db.json'
+/*import colors from './db/colors.json'*/
+
+const color= ["bg1", "bg2", "bg3", "bg4",]
 
 function App() {
 
@@ -20,7 +22,7 @@ const handleClick = () => {
 }
 
   return (
-    <div style={{ backgroundColor: colorRandom }} className="App">
+    <div /*style={{ backgroundColor: colorRandom }}*/ className="App">
       <QuoteBox 
         quoteRandom={quoteRandom} 
         handleClick={handleClick}
