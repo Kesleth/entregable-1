@@ -45,6 +45,14 @@
   color: white;
 }
 
+.h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
 .box__btn:hover {
   transform: scale(1.1);
   box-shadow: 0 0 0.5em #000300;
