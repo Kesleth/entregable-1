@@ -23,12 +23,14 @@ const handleClick = () => {
 
   return (
     <div /*style={{ backgroundColor: colorRandom }}*/ className={`App ${colorRandom}`}>
+      <div className='container'>
          <h1>MI PROJECTO</h1>
       <QuoteBox 
         quoteRandom={quoteRandom} 
         handleClick={handleClick}
         colorRandom={colorRandom} 
       />
+      </div>
     </div>
   )
 }
